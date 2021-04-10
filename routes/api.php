@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
-
+use App\Http\Controllers\Api\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,8 +24,8 @@ Route::group([
     'middleware' => 'auth:api'
 ], function () {
     Route::prefix('user')->group(function () {
-        Route::get('get', function (Request $request) {
-            return $request->user();
-        });
+        Route::get('get', [UserController::class, 'get']);
+        Route::put('update', [UserController::class, 'update']);
+        Route::put('changePassword', [UserController::class, 'changePassword']);
     });
 });
