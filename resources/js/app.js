@@ -29,12 +29,16 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
-
+import Vuex from 'vuex'
+import Vuesax from 'vuesax'
 import App from './views/App';
-
 import router from './router';
+import 'vuesax/dist/vuesax.css' //Vuesax styles
+Vue.use(Vuesax, {
+    // options here
+})
+Vue.use(Vuex)
+Vue.use(VueRouter)
 
 const app = new Vue({
     el: '#app',
