@@ -3,7 +3,7 @@
     <p>
       <router-link :to="{ name: 'home' }">Home</router-link>
     </p>
-    <div class="container">
+    <div class="">
       <router-view></router-view>
     </div>
   </div>

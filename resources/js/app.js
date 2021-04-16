@@ -34,6 +34,8 @@ import Vuesax from 'vuesax'
 import App from './views/App';
 import router from './router';
 import 'vuesax/dist/vuesax.css' //Vuesax styles
+import BootstrapVue from 'bootstrap-vue' //Importing
+Vue.use(BootstrapVue)
 Vue.use(Vuesax, {
     // options here
 })
