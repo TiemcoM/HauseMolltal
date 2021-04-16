@@ -1,9 +1,17 @@
 import home from '../views/home/index';
+import Dashboard from "../layouts/Dashboard";
 
 export default [
     {
-        path: '/home',
-        name: 'home',
-        component: home
+        path: '/',
+        name: 'Dashboard',
+        component: Dashboard,
+        children: [
+            {
+                path: "/home",
+                name: "home",
+                component: home,
+            },
+        ]
     }
 ];
