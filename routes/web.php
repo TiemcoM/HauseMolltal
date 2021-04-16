@@ -16,6 +16,9 @@ use App\Http\Controllers\VueController;
 Route::get('/', function () {
     return view('home/home');
 });
+Route::get('/home', function () {
+    return redirect('/');
+});
 Route::get('/admin', function (){
     return redirect('admin/home');
 });
