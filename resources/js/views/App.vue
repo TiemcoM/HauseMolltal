@@ -1,12 +1,8 @@
 <template>
-  <div>
-    <p>
-      <router-link :to="{ name: 'home' }">Home</router-link>
-    </p>
-    <div class="">
-      <router-view></router-view>
+    <div>
+        <div><CustomNavBar/></div>
+        <div><router-view/></div>
     </div>
-  </div>
 </template>
 <script>
 export default {}
