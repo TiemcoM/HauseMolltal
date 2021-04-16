@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\VueController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home/welcome');
 });
+Route::get('/admin', function (){
+    return redirect('admin/home');
+});
+Route::get('admin/{any}', [VueController::class, 'index'])->where('any', '.*');
