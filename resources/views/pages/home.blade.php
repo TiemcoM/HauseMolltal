@@ -1,6 +1,5 @@
+@include('layouts.app')
 
-    @include('layouts.app')
-
-@section('çontent')
-   HOME!!!
+@section('content')
+    <h1>Home</h1>
 @endsection
