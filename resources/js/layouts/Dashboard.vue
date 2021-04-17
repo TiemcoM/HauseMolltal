@@ -1,16 +1,16 @@
 <template>
     <div>
         <div class="h-100">
-            <CustomSideBar v-if="showSidebar"/>
+            <CustomSideBar v-if="sidebarActive"/>
 
-            <div v-bind:class="{ contentWithSidebar: showSidebar, content: !showSidebar }">
+            <div v-bind:class="{ contentWithSidebar: sidebarActive, content: !sidebarActive }">
                 <vs-row style="padding: 20px">
 
                     <vs-col>
-                        <CustomNavBar/>
+                        <CustomNavBar :sidebarActive="sidebarActive" />
                     </vs-col>
 
-                    <vs-col>
+                    <vs-col style="padding-top: 20px">
                         <router-view/>
                     </vs-col>
 
@@ -26,8 +26,11 @@ export default {
     name: "Dashboard",
     data() {
         return {
-            showSidebar: true,
+            sidebarActive: true,
         }
+    },
+    mounted() {
+        this.setSidebar();
     },
     created() {
         window.addEventListener("resize", this.setSidebar);
@@ -38,10 +41,10 @@ export default {
     methods: {
         setSidebar(e) {
             if (window.innerWidth > 900) {
-                this.showSidebar = true;
+                this.sidebarActive = true;
             }
             if (window.innerWidth < 900) {
-                this.showSidebar = false;
+                this.sidebarActive = false;
             }
         }
     }
@@ -55,6 +58,6 @@ export default {
 
 .contentWithSidebar {
     width: calc(100% - 260px);
-    margin-left: 260px
+    margin-left: 260px;
 }
 </style>

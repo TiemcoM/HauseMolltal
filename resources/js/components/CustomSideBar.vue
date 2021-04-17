@@ -1,13 +1,21 @@
 <template>
     <div class="sidebar h-100">
-        <vs-row>
-            <vs-col><h1>HauseMolltal</h1></vs-col>
+        <vs-row style="padding-top: 20px">
+            <vs-col><h1 style="padding-bottom: 20px">HauseMolltal</h1></vs-col>
         </vs-row>
         <vs-row>
-            <vs-col><a>link 1</a></vs-col>
-            <vs-col><a>link 2</a></vs-col>
-            <vs-col><a>link 3</a></vs-col>
-            <vs-col><a>link 4</a></vs-col>
+            <vs-col>
+                <SideBarItem name="home" icon="fa-home" route="home"></SideBarItem>
+            </vs-col>
+            <vs-col>
+                <SideBarItem name="contact" icon="fa-address-book" route="contact"></SideBarItem>
+            </vs-col>
+<!--            <vs-col>-->
+<!--                <SideBarItem></SideBarItem>-->
+<!--            </vs-col>-->
+<!--            <vs-col>-->
+<!--                <SideBarItem></SideBarItem>-->
+<!--            </vs-col>-->
         </vs-row>
 
 
@@ -27,7 +35,6 @@ export default {
     text-align: center;
     padding-top: 0;
     border-width: 0 0 1px 0;
-    border-style: solid;
-    box-shadow: 0 0 2rem 0 rgb(136 152 170);
+    box-shadow: 0 0 1rem 0 rgb(136 152 170);
 }
 </style>
