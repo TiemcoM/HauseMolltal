@@ -34,5 +34,5 @@ Route::get('/contact', function () {
 
 Route::get('/admin', function (){
     return redirect('admin/pages');
-});
+})->name('admin');
 Route::get('admin/{any}', [VueController::class, 'index'])->where('any', '.*');
