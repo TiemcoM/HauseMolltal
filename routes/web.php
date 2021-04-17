@@ -16,7 +16,7 @@ use App\Http\Controllers\VueController;
 Route::get('/', function () {
     return view('pages/home');
 })->name('home');
-Route::get('/pages', function () {
+Route::get('/home', function () {
     return redirect('/');
 });
 
