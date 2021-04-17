@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Hause Molltal') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -39,16 +39,16 @@
 </head>
 <body>
 <div id="app">
-    <div class="App">
+    <div class="App container">
         <header>
-            @include('layouts.navbar.header')
+            @include('layouts.NavBar.header')
         </header>
 
         <main>
             @yield('content')
         </main>
 
-        @include('layouts.Footer.footer')
+        @include('layouts.footer')
 
     </div>
 </div>
