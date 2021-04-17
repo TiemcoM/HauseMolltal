@@ -16,7 +16,9 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-               Naar admin pagina ooit
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin') }}">Login</a>
+                </li>
             </ul>
         </div>
     </div>
