@@ -2,21 +2,16 @@
     <div>
         <div class="h-100">
             <CustomSideBar v-if="sidebarActive"/>
-
             <div v-bind:class="{ contentWithSidebar: sidebarActive, content: !sidebarActive }">
                 <vs-row style="padding: 20px">
-
                     <vs-col>
-                        <CustomNavBar :sidebarActive="sidebarActive" />
+                        <CustomNavBar :sidebarActive="sidebarActive"/>
                     </vs-col>
-
                     <vs-col style="padding-top: 20px">
                         <router-view/>
                     </vs-col>
-
                 </vs-row>
             </div>
-
         </div>
     </div>
 </template>

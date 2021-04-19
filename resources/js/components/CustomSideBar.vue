@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar h-100">
+    <div class="Sidebar h-100">
         <vs-row style="padding-top: 20px">
             <vs-col><h1 style="padding-bottom: 20px">HauseMolltal</h1></vs-col>
         </vs-row>
@@ -10,15 +10,7 @@
             <vs-col>
                 <SideBarItem name="contact" icon="fa-address-book" route="contact"></SideBarItem>
             </vs-col>
-<!--            <vs-col>-->
-<!--                <SideBarItem></SideBarItem>-->
-<!--            </vs-col>-->
-<!--            <vs-col>-->
-<!--                <SideBarItem></SideBarItem>-->
-<!--            </vs-col>-->
         </vs-row>
-
-
     </div>
 </template>
 
