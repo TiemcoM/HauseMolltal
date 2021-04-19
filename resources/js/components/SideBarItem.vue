@@ -14,36 +14,13 @@ export default {
 </script>
 
 <style scoped>
-link{
-    display:inline-block;
-    padding:0.35em 1.2em;
-    border:0.1em solid #FFFFFF;
-    margin:0 0.3em 0.3em 0;
-    border-radius:0.12em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color:#FFFFFF;
-    text-align:center;
-    transition: all 0.2s;
+.link {
+    display: block;
+    padding-left: 50px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 25px;
+    color: #818181;
 }
-link:hover{
-    color:#000000;
-    background-color:#FFFFFF;
-}
-@media all and (max-width:30em){
-    link{
-        display:block;
-        margin:0.4em auto;
-        }
-}
-/*.link {*/
-/*    padding-left: 40px;*/
-/*    text-decoration: none;*/
-/*    text-align: left;*/
-/*    font-size: 20px;*/
-/*    color: #818181;*/
-/*    display: block;*/
-/*}*/
 </style>
