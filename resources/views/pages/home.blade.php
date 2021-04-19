@@ -2,7 +2,7 @@
 Home
 @endsection
 
-@include('layouts.app')
+@extends('layouts.app')
 
 @section('content')
     <div class="p-5 text-center bg-image"
@@ -16,7 +16,7 @@ Home
                 <div class="text-white">
                     <h1 class="mb-3">Hause Molltal</h1>
                     <h4 class="mb-3">Mooi huissie</h4>
-                    <a class="btn btn-outline-light btn-lg" href="#!" role="button">KLIK DAN MET JE BEK</a>
+                    <a class="btn btn-outline-light btn-lg" href="{{ route('gallery') }}" role="button">Meer afbeeldingen</a>
                 </div>
             </div>
         </div>
