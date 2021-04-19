@@ -1,9 +1,9 @@
 <template>
     <div class="navbar w-100">
         <vs-row>
-            <vs-col style="text-align: left"></vs-col>
-            <vs-col style="text-align: center"></vs-col>
-            <vs-col style="text-align: right"><div v-if="sidebarActive === false"><i class="fas fa-bars" /></div></vs-col>
+            <vs-col w="4" style="text-align: left"></vs-col>
+            <vs-col w="4" style="text-align: center"></vs-col>
+            <vs-col w="4" style="text-align: right"><div @click="$emit('showFullScreenNavBar')" v-if="sidebarActive === false"><i class="fas fa-bars" /></div></vs-col>
         </vs-row>
     </div>
 </template>

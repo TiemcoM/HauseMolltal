@@ -1,16 +1,18 @@
 <template>
     <div>
+        <FullScreenNavBar @hideFullScreenNavBar="FullScreenNavBarActive = false" v-if="FullScreenNavBarActive"/>
         <div class="h-100">
             <CustomSideBar v-if="sidebarActive"/>
             <div v-bind:class="{ contentWithSidebar: sidebarActive, content: !sidebarActive }">
                 <vs-row style="padding: 20px">
                     <vs-col>
-                        <CustomNavBar :sidebarActive="sidebarActive"/>
+                        <CustomNavBar @showFullScreenNavBar="FullScreenNavBarActive = true" :sidebarActive="sidebarActive"/>
                     </vs-col>
                     <vs-col style="padding-top: 20px">
                         <router-view/>
                     </vs-col>
                 </vs-row>
+
             </div>
         </div>
     </div>
@@ -22,6 +24,7 @@ export default {
     data() {
         return {
             sidebarActive: true,
+            FullScreenNavBarActive: false,
         }
     },
     mounted() {
@@ -34,9 +37,10 @@ export default {
         window.removeEventListener("resize", this.setSidebar);
     },
     methods: {
-        setSidebar(e) {
+        setSidebar() {
             if (window.innerWidth > 900) {
                 this.sidebarActive = true;
+                this.FullScreenNavBarActive = false;
             }
             if (window.innerWidth < 900) {
                 this.sidebarActive = false;
