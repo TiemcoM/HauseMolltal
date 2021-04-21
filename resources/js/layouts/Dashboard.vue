@@ -1,18 +1,17 @@
 <template>
     <div>
-        <FullScreenNavBar @hideFullScreenNavBar="FullScreenNavBarActive = false" v-if="FullScreenNavBarActive"/>
         <div class="h-100">
             <CustomSideBar v-if="sidebarActive"/>
             <div v-bind:class="{ contentWithSidebar: sidebarActive, content: !sidebarActive }">
                 <vs-row style="padding: 20px">
                     <vs-col>
-                        <CustomNavBar @showFullScreenNavBar="FullScreenNavBarActive = true" :sidebarActive="sidebarActive"/>
+                        <CustomNavBar @toggleFullScreenNavBar="FullScreenNavBarActive = !FullScreenNavBarActive"
+                                      :fullscreenActive="FullScreenNavBarActive" :sidebarActive="sidebarActive"/>
                     </vs-col>
                     <vs-col style="padding-top: 20px">
                         <router-view/>
                     </vs-col>
                 </vs-row>
-
             </div>
         </div>
     </div>
