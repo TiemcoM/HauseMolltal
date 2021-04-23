@@ -1,4 +1,5 @@
 import home from '../views/home/index';
+import PageNotFound from '../views/pageNotFound';
 import Dashboard from "../layouts/Dashboard";
 
 export default [
@@ -13,5 +14,6 @@ export default [
                 component: home,
             },
         ]
-    }
+    },
+    { path: "*", component: PageNotFound }
 ];
