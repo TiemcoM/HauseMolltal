@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VueController;
+use App\Http\Controllers\ContactUsFormController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +32,8 @@ Route::get('/gallerij', function () {
 Route::get('/contact', function () {
     return view('pages/contact');
 })->name('contact');
+Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+
 
 Route::get('/admin', function (){
     return redirect('admin/pages');
