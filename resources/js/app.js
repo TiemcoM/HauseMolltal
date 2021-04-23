@@ -33,10 +33,11 @@ import Vuex from 'vuex'
 import Vuesax from 'vuesax'
 import App from './views/App';
 import router from './router';
-import 'vuesax/dist/vuesax.css' //Vuesax styles
-import BootstrapVue from 'bootstrap-vue' //Importing
-import '@fortawesome/fontawesome-free/css/all.css'
-import '@fortawesome/fontawesome-free/js/all.js'
+import 'vuesax/dist/vuesax.css';
+import BootstrapVue from 'bootstrap-vue';
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
+import store from './store'
 Vue.use(BootstrapVue)
 Vue.use(Vuesax, {
     // options here
@@ -48,4 +49,5 @@ const app = new Vue({
     el: '#app',
     components: {App},
     router,
+    store
 });
