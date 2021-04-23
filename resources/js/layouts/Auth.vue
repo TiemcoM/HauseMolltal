@@ -1,12 +1,13 @@
 <template>
     <div>
-        Login
+        <router-view/>
     </div>
+
 </template>
 
 <script>
 export default {
-    name: "login"
+    name: "Auth"
 }
 </script>
 

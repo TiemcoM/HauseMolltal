@@ -1,6 +1,8 @@
-import home from '../views/home/index';
-import PageNotFound from '../views/pageNotFound';
 import Dashboard from "../layouts/Dashboard";
+import Auth from "../layouts/Auth";
+import PageNotFound from '../views/pageNotFound';
+import home from '../views/home/index';
+import login from "../views/auth/login";
 
 export default [
     {
@@ -15,5 +17,17 @@ export default [
             },
         ]
     },
-    { path: "*", component: PageNotFound }
+    {
+        path: '/',
+        name: 'auth',
+        component: Auth,
+        children: [
+            {
+                path: "/login",
+                name: "login",
+                component: login,
+            },
+        ]
+    },
+    {path: "*", component: PageNotFound}
 ];
