@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VueController;
+use App\Http\Controllers\ContactUsFormController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +15,27 @@ use App\Http\Controllers\VueController;
 */
 
 Route::get('/', function () {
-    return view('home/welcome');
+    return view('pages/home');
+})->name('home');
+Route::get('/home', function () {
+    return redirect('/');
 });
+
+Route::get('/locatie', function () {
+    return view('pages/location');
+})->name('location');
+
+Route::get('/gallerij', function () {
+    return view('pages/gallery');
+})->name('gallery');
+
+Route::get('/contact', function () {
+    return view('pages/contact');
+})->name('contact');
+Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+
+
 Route::get('/admin', function (){
-    return redirect('admin/home');
-});
+    return redirect('admin/pages');
+})->name('admin');
 Route::get('admin/{any}', [VueController::class, 'index'])->where('any', '.*');
