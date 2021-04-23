@@ -2,7 +2,7 @@
     Gallerij
 @endsection
 
-@include('layouts.app')
+@extends('layouts.app')
 
 @section('content')
 
