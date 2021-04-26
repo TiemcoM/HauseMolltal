@@ -12,7 +12,7 @@ export default [
         children: [
             {
                 path: "/home",
-                name: "home",
+                name: "Home",
                 component: home,
             },
         ]
@@ -24,7 +24,7 @@ export default [
         children: [
             {
                 path: "/login",
-                name: "login",
+                name: "Login",
                 component: login,
             },
         ]
