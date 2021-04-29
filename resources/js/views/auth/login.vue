@@ -2,13 +2,13 @@
     <div>
         <vs-row style="padding-top: 15px">
             <vs-col sm="12" md="12" lg="6">
-                <vs-input label-placeholder="E-mail"></vs-input>
+                <vs-input v-model="userData.email" label-placeholder="E-mail"></vs-input>
             </vs-col>
             <vs-col sm="12" md="12" lg="6">
-                <vs-input label-placeholder="Wachtwoord"></vs-input>
+                <vs-input v-model="userData.password" type="password" label-placeholder="Wachtwoord"></vs-input>
             </vs-col>
             <vs-col align="right">
-                <vs-button color="success">Inloggen</vs-button>
+                <vs-button @click="login" color="success">Inloggen</vs-button>
             </vs-col>
         </vs-row>
     </div>
@@ -16,7 +16,20 @@
 
 <script>
 export default {
-    name: "login"
+    name: "login",
+    data() {
+      return {
+          userData: {
+              email: '',
+              password: '',
+          }
+      }
+    },
+    methods: {
+        login() {
+            this.$store.dispatch("user/login", this.userData)
+        }
+    }
 }
 </script>
 
