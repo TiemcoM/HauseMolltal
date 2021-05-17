@@ -9,6 +9,7 @@ export default [
         path: '/',
         name: 'Dashboard',
         component: Dashboard,
+        meta: { requiresAuth: true },
         children: [
             {
                 path: "/home",
