@@ -13,6 +13,25 @@ const actions = {
             localStorage.removeItem('apiToken')
             console.warn(err)
         })
+    },
+    logout() {
+        localStorage.removeItem('apiToken')
+        router.push('Login');
+    },
+    checkAuth() {
+        const access_token = localStorage.getItem('apiToken');
+        return new Promise((resolve, reject) => {
+            if ((!localStorage.getItem('apiToken'))) {
+                reject()
+            } else {
+                axios.get(process.env.MIX_API_URL + 'user/get', {headers: {'Authorization': `Bearer ${access_token}`}}).then(res => {
+                    resolve()
+                }).catch(err => {
+                    localStorage.removeItem('apiToken')
+                    reject()
+                })
+            }
+        })
     }
 }
 const mutations = {}
