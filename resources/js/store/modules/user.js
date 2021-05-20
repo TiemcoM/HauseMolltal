@@ -6,12 +6,15 @@ const state = {
 const getters = {}
 const actions = {
     login({commit, dispatch}, userData) {
-        axios.post(process.env.MIX_API_URL + 'auth/login', userData).then(res => {
-            localStorage.setItem('apiToken', res.data.user.access_token);
-            router.push('Home');
-        }).catch(err => {
-            localStorage.removeItem('apiToken')
-            console.warn(err)
+        return new Promise((resolve, reject) => {
+            axios.post(process.env.MIX_API_URL + 'auth/login', userData).then(res => {
+                localStorage.setItem('apiToken', res.data.user.access_token);
+                router.push('Home');
+                resolve()
+            }).catch(err => {
+                localStorage.removeItem('apiToken')
+                reject()
+            })
         })
     },
     logout() {

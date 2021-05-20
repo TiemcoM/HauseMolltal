@@ -11,8 +11,6 @@ const router = new VueRouter({
     routes,
 });
 router.beforeEach((to, from, next) => {
-    let test = to.matched.some(record => record.meta.requiresAuth);
-    console.log(test)
     if (to.matched.some(record => record.meta.requiresAuth)) {
         store.dispatch("user/checkAuth").then(res => {
             next()

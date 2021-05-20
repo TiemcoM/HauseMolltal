@@ -18,16 +18,31 @@
 export default {
     name: "login",
     data() {
-      return {
-          userData: {
-              email: '',
-              password: '',
-          }
-      }
+        return {
+            userData: {
+                email: '',
+                password: '',
+            }
+        }
     },
     methods: {
         login() {
-            this.$store.dispatch("user/login", this.userData)
+            const loading = this.$vs.loading()
+            this.$store.dispatch("user/login", this.userData).then(res => {
+                loading.close()
+                this.$vs.notification({
+                    color: 'success',
+                    title: 'Inloggen gelukt',
+                    text: `Je wordt nu door gestuurd naar de home pagina`
+                })
+            }).catch(err => {
+                loading.close()
+                this.$vs.notification({
+                    color: 'warning',
+                    title: 'Inloggen mislukt',
+                    text: `Probeer het opnieuw`
+                })
+            })
         }
     }
 }
