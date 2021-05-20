@@ -3,6 +3,7 @@ import Auth from "../layouts/Auth";
 import PageNotFound from '../views/pageNotFound';
 import home from '../views/home/index';
 import login from "../views/auth/login";
+import Register from "../views/auth/register";
 
 export default [
     {
@@ -27,6 +28,11 @@ export default [
                 path: "/login",
                 name: "Login",
                 component: login,
+            },
+            {
+                path: "/register",
+                name: "Register",
+                component: Register,
             },
         ]
     },

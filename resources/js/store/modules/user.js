@@ -21,6 +21,16 @@ const actions = {
         localStorage.removeItem('apiToken')
         router.push('Login');
     },
+    register({commit, dispatch}, userData) {
+        return new Promise((resolve, reject) => {
+                axios.get(process.env.MIX_API_URL + 'auth/signup', userData).then(res => {
+                    resolve()
+                }).catch(err => {
+                    localStorage.removeItem('apiToken')
+                    reject()
+                })
+        })
+    },
     checkAuth() {
         const access_token = localStorage.getItem('apiToken');
         return new Promise((resolve, reject) => {
