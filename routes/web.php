@@ -24,6 +24,10 @@ Route::get('/locatie', function () {
     return view('pages/location');
 })->name('location');
 
+Route::get('/huis', function () {
+    return view('pages/hause');
+})->name('huis');
+
 Route::get('/gallerij', function () {
     return view('pages/gallery');
 })->name('gallery');
