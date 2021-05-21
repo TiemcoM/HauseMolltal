@@ -15,7 +15,7 @@
     <div>
         <h5>Informatie over de omgeving!</h5>
         <h6>Het huisje staat in het plaatsje Untersagritz, dit ligt vlakbij Dollach.</h6>
-        <h6>Faciliteiten</h6>
+        <h6><b>Faciliteiten</b></h6>
         <p>
             - In Dollach zijn ook een supermarkt, slager, bakker en verschillende restaurants. <br>
             - Op 25 min rijden ligt de stad Liënz met veel shoppings mogelijkheden. <br>
