@@ -45,33 +45,5 @@ Home
         </a>
     </div>
 </div>
-
-    <div>
-        <div>
-            <div>
-                <div id="p7tpc1_1">
-                    <h4>Korte informatie... </h4>
-                    <p>Ons huis bestaat uit 2 apart te verhuren appartementen.</p>
-                    <p>Het bovenste appartement bestaat uit:</p>
-                    <p>- 2 Slaapkamers</p>
-                    <p>- Woonkamer met ruime eethoek en zithoek </p>
-                    <p>- Aparte keuken</p>
-                    <p>- Badkamer en wc.</p>
-                    <p>1 Slaapkamer is voorzien van een tweepersoonsbed. En de andere slaapkamer is voorzien van twee eenpersoonsbedden en een stapelbed.</p>
-                    <p>Het balkon is te bereiken vanuit de kamer,keuken en 1 slaapkamer.</p>
-                    <p>Het appartement beneden bestaat uit:</p>
-                    <p>- Woonkamer met open keuken </p>
-                    <p>- 2 slaapkamers</p>
-                    <p>- badkamer en wc.</p>
-                    <p>1 Slaapkamer is voorzien van een twee persoonsbed en een stapelbed. En de andere slaapkamer is voorzien van een tweepersoonsbed.</p>
-                    <p>Er is nog een extra slaapkamer bij te huren voor 2 personen.</p>
-                    <p>De grote tuin is voor beide appartementen te gebruiken. Er staat een trampoline en verder is er speelgoed aanwezig.</p>
-                    <p>In de garage staan 2 damesfietsen en 3 mountainbikes.</p>
-                    <p>Handdoeken/ linnengoed/ wasmachine/ strijkplank/ strijkijzer/ droogrek zijn aanwezig.</p>
-                    <p>Tevens beschikken wij over 2 kinderbedjes, 1 kinderstoel en box.</p>
-                    <p><b>Huisdieren en roken niet toegestaan.</b></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 @endsection
