@@ -18,17 +18,25 @@ const actions = {
         })
     },
     logout() {
-        localStorage.removeItem('apiToken')
-        router.push('Login');
+        const access_token = localStorage.getItem('apiToken');
+        return new Promise((resolve, reject) => {
+                axios.post(process.env.MIX_API_URL + 'auth/logout', {}, {headers: {'Authorization': `Bearer ${access_token}`}}).then(res => {
+                    localStorage.removeItem('apiToken')
+                    router.push('Login');
+                    resolve()
+                }).catch(err => {
+                    reject()
+                })
+            })
     },
     register({commit, dispatch}, userData) {
         return new Promise((resolve, reject) => {
-                axios.get(process.env.MIX_API_URL + 'auth/signup', userData).then(res => {
-                    resolve()
-                }).catch(err => {
-                    localStorage.removeItem('apiToken')
-                    reject()
-                })
+            axios.post(process.env.MIX_API_URL + 'auth/signup', userData).then(res => {
+                resolve()
+            }).catch(err => {
+                localStorage.removeItem('apiToken')
+                reject()
+            })
         })
     },
     checkAuth() {
