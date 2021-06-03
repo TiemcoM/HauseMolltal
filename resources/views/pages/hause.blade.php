@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <img src="{{ asset('assets/img/HuisOmgeving/huis/Hause.jpg') }}" alt="HauseMolltal" style="width:100%;">
+    <img src="{{ asset('assets/img/HuisOmgeving/huis/huis2.jpg') }}" alt="HauseMolltal" style="width:100%;">
     <h2 class="text-center bg-light"><b>Het huis</b></h2>
     <br>
 
