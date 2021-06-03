@@ -40,6 +40,6 @@ Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name
 
 
 Route::get('/admin', function (){
-    return redirect('admin/pages');
+    return redirect('admin/home');
 })->name('admin');
 Route::get('admin/{any}', [VueController::class, 'index'])->where('any', '.*');
