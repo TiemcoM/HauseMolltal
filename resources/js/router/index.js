@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
+import store from './../store';
 
 Vue.use(VueRouter);
 
@@ -9,5 +10,17 @@ const router = new VueRouter({
     base: 'admin',
     routes,
 });
-
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+        store.dispatch("user/checkAuth").then(res => {
+            next()
+        }).catch(err => {
+            next({
+                path: '/login',
+            })
+        });
+    } else {
+        next()
+    }
+})
 export default router;
