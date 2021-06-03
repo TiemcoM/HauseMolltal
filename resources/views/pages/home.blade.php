@@ -16,15 +16,15 @@
                 <div class="carousel-item active">
                     <img src="{{ asset('assets/img/HuisOmgeving/huis/huis2.JPG') }}" class="d-block w-100"
                          alt="HauseMoltall">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Hause Moltall</h5>
+                    <div class="carousel-caption d-none d-md-block" style="background-color:rgba(0,0,0,0.4);">
+                        <h5>Hause Moltall</h5>1
                         <p>Kom tot rust in de Oostenrijkse natuur!</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('assets/img/HuisOmgeving/zomer/zomer1.JPG') }}" class="d-block w-100"
                          alt="Omgeving HauseMoltall">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block" style="background-color:rgba(0,0,0,0.4);">
                         <h5><a>Omgeving</a></h5>
                         <p>Geniet van al het moois wat Karinthië te bieden heeft</p>
                     </div>
@@ -32,7 +32,7 @@
                 <div class="carousel-item">
                     <img src="{{ asset('assets/img/HuisOmgeving/wandelen/wandelen6.JPG') }}" class="d-block w-100"
                          alt="Activiteiten HauseMoltall">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block" style="background-color:rgba(0,0,0,0.4);">
                         <h5>Activiteiten</h5>
                         <p>Genoeg te beleven in de buurt!</p>
 
