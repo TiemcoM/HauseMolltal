@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\VueController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/home');
+})->name('home');
+Route::get('/home', function () {
+    return redirect('/');
 });
+
+Route::get('/locatie', function () {
+    return view('pages/location');
+})->name('location');
+
+Route::get('/huis', function () {
+    return view('pages/hause');
+})->name('huis');
+
+Route::get('/gallerij', function () {
+    return view('pages/gallery');
+})->name('gallery');
+
+Route::get('/contact', function () {
+    return view('pages/contact');
+})->name('contact');
+
+Route::get('/admin', function (){
+    return redirect('admin/pages');
+})->name('admin');
+Route::get('admin/{any}', [VueController::class, 'index'])->where('any', '.*');
