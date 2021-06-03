@@ -1,24 +1,43 @@
 @section('title')
-Home
+    Home
 @endsection
 
 @extends('layouts.app')
 
 @section('content')
-    <div class="p-5 text-center bg-image"
-         style="
-      background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
-      height: 400px;
-      margin-top: 58px;
-    ">
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-            <div class="d-flex justify-content-center align-items-center h-100">
-                <div class="text-white">
-                    <h1 class="mb-3">Hause Molltal</h1>
-                    <h4 class="mb-3">Mooi huissie</h4>
-                    <a class="btn btn-outline-light btn-lg" href="{{ route('gallery') }}" role="button">Meer afbeeldingen</a>
+    <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ asset('assets/img/HuisOmgeving/huis/huis2.JPG') }}" class="d-block w-100"
+                         alt="HauseMoltall">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hause Moltall</h5>
+                        <p>Kom tot rust in de Oostenrijkse natuur!</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('assets/img/HuisOmgeving/zomer/zomer1.JPG') }}" class="d-block w-100"
+                         alt="Omgeving HauseMoltall">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><a>Omgeving</a></h5>
+                        <p>Geniet van al het moois wat Karinthië te bieden heeft</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('assets/img/HuisOmgeving/wandelen/wandelen6.JPG') }}" class="d-block w-100"
+                         alt="Activiteiten HauseMoltall">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Activiteiten</h5>
+                        <p>Genoeg te beleven in de buurt!</p>
+
+
+                    </div>
+
+
 @endsection
