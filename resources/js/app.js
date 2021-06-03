@@ -37,7 +37,8 @@ import 'vuesax/dist/vuesax.css';
 import BootstrapVue from 'bootstrap-vue';
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
-import store from './store'
+import 'boxicons';
+import store from './store';
 Vue.use(BootstrapVue)
 Vue.use(Vuesax, {
     // options here
