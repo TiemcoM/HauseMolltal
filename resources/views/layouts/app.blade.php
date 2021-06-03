@@ -39,17 +39,18 @@
 </head>
 <body>
 <div id="app">
-    <div class="App container">
-        <header>
+    <div class="App">
+        <header style="position:relative;">
             @include('layouts.NavBar.header')
         </header>
+        <div class="container">
+            <main>
+                @yield('content')
+            </main>
 
-        <main>
-            @yield('content')
-        </main>
+            @include('layouts.footer')
 
-        @include('layouts.footer')
-
+        </div>
     </div>
 </div>
 </body>
