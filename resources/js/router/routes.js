@@ -29,11 +29,6 @@ export default [
                 name: "Login",
                 component: login,
             },
-            {
-                path: "/register",
-                name: "Register",
-                component: Register,
-            },
         ]
     },
     {path: "*", component: PageNotFound}
