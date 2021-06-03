@@ -6,7 +6,7 @@ import login from "../views/auth/login";
 
 export default [
     {
-        path: '/',
+        path: '/admin',
         name: 'Dashboard',
         component: Dashboard,
         meta: { requiresAuth: true },
