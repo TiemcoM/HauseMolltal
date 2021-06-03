@@ -3,7 +3,6 @@ import Auth from "../layouts/Auth";
 import PageNotFound from '../views/pageNotFound';
 import home from '../views/home/index';
 import login from "../views/auth/login";
-import Register from "../views/auth/register";
 
 export default [
     {
