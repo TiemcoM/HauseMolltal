@@ -3,6 +3,7 @@ import Auth from "../layouts/Auth";
 import PageNotFound from '../views/pageNotFound';
 import home from '../views/home/index';
 import login from "../views/auth/login";
+import calendar from '../views/calendar/index';
 
 export default [
     {
@@ -29,6 +30,10 @@ export default [
                 component: login,
             },
         ]
+    },{
+        path: '/calendar',
+        name: 'calendar',
+        component: calendar,
     },
     {path: "*", component: PageNotFound}
 ];
