@@ -29,7 +29,7 @@ Route::get('/huis', function () {
 })->name('huis');
 
 Route::get('/gallerij', function () {
-    return view('pages/gallery');
+    return view('pages/gallery/index');
 })->name('gallery');
 
 Route::get('/contact', function () {
