@@ -109,7 +109,22 @@
         <div class="card">
         <div class="card-body">
             <h5 class="card-title">Contact gegevens</h5>
-            <p class="card-text">Hier komen de contact gegevens.</p>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td scope="row" style="border: none; text-align: center;"><i class="fas fa-phone"></i></td>
+                        <td style="border: none;">0522-463603.</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" style="border: none; text-align: center;"><i class="far fa-envelope"></i></i></td>
+                        <td style="border: none;">gejabra@hotmail.com</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" style="border: none; text-align: center;"><i class="fas fa-map-pin"></i></td>
+                        <td style="border: none;">Smitserf 36 <br /> 7951 JG <br /> Staphorst</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         </div>
     </div>
