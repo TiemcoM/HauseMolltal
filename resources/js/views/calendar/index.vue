@@ -11,7 +11,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 
 export default {
-    name: "Calendar",
+    name: "calendar",
     components: {
         FullCalendar // make the <FullCalendar> tag available
     },
