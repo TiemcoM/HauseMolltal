@@ -11,5 +11,8 @@
     <a class="nav-link" href="{{ route('gallery') }}">Galerij</a>
 </li>
 <li class="nav-item">
+    <a class="nav-link" href="{{ route('kalender') }}">Kalender</a>
+</li>
+<li class="nav-item">
     <a class="nav-link" href="{{ route('contact') }}">Contact</a>
 </li>
