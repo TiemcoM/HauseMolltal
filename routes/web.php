@@ -33,6 +33,10 @@ Route::get('/gallerij', function () {
     return view('pages/gallery');
 })->name('gallery');
 
+Route::get('/kalender', function () {
+    return view('pages/calendar');
+})->name('kalender');
+
 Route::get('/contact', function () {
     return view('pages/contact');
 })->name('contact');
