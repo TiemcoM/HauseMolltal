@@ -44,13 +44,13 @@
             @include('layouts.NavBar.header')
         </header>
         <div class="container">
-            <main>
+            <main style="min-height: calc(100vh - 104px)">{{--71px header + 33px footer = 104px--}}
                 @yield('content')
             </main>
-
-            @include('layouts.footer')
-
         </div>
+        <footer style="background-color: #f8fafc; box-shadow: 0 -1px 10px 0 rgba(0, 0, 0, 0.19); position: relative">
+            @include('layouts.footer')
+        </footer>
     </div>
 </div>
 </body>
