@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function(event) {
             console.log( "ready!" );
 
@@ -21,7 +21,7 @@
                 }(i))
             }
         });
-    </script>
+    </script> -->
 
     <nav>
         <div class="nav nav-tabs mt-4" id="nav-tab" role="tablist">
