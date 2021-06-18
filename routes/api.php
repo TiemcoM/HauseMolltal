@@ -32,5 +32,6 @@ Route::group([
     });
     Route::prefix('contact')->group(function () {
         Route::get('get', [ContactController::class, 'get']);
+        Route::delete('delete', [ContactController::class, 'delete']);
     });
 });
