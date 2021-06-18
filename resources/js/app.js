@@ -27,10 +27,12 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Vuex from 'vuex'
-import Vuesax from 'vuesax'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Vuex from 'vuex';
+import Vuesax from 'vuesax';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 import App from './views/App';
 import router from './router';
 import 'vuesax/dist/vuesax.css';
@@ -43,6 +45,7 @@ Vue.use(BootstrapVue)
 Vue.use(Vuesax, {
     // options here
 })
+Vue.use(Vuetify)
 Vue.use(Vuex)
 Vue.use(VueRouter)
 

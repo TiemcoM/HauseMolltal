@@ -1,9 +1,10 @@
 import Dashboard from "../layouts/Dashboard";
 import Auth from "../layouts/Auth";
 import PageNotFound from '../views/pageNotFound';
-import home from '../views/home/index';
-import login from "../views/auth/login";
-import calendar from '../views/calendar/index';
+import Home from '../views/home/index';
+import Contact from '../views/contact/index';
+import Login from "../views/auth/login";
+import Calendar from '../views/calendar/index';
 
 export default [
     {
@@ -15,7 +16,12 @@ export default [
             {
                 path: "/home",
                 name: "Home",
-                component: home,
+                component: Home,
+            },
+            {
+                path: "/contact",
+                name: "Contact",
+                component: Contact,
             },
         ]
     },
@@ -27,13 +33,13 @@ export default [
             {
                 path: "/login",
                 name: "Login",
-                component: login,
+                component: Login,
             },
         ]
     },{
         path: '/calendar',
         name: 'calendar',
-        component: calendar,
+        component: Calendar,
     },
     {path: "*", component: PageNotFound}
 ];
