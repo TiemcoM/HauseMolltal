@@ -10,7 +10,7 @@ class ContactUsFormController extends Controller {
 
     // Create Contact Form
     public function createForm(Request $request) {
-        $gegevens = contactDetails::all();
+        $gegevens = contactDetails::all()->first();
         return view('pages.contact', compact('gegevens'));
     }
 

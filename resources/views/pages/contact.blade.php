@@ -109,24 +109,22 @@
         <div class="card">
         <div class="card-body">
             <h5 class="card-title">Contact gegevens</h5>
-            @foreach ($gegevens as $gegeven)
             <table class="table">
                 <tbody>
                     <tr>
                         <td scope="row" style="border: none; text-align: center;"><i class="fas fa-phone"></i></td>
-                        <td style="border: none;">{{$gegeven->phone_number}}</td>
+                        <td style="border: none;">{{$gegevens->phone_number}}</td>
                     </tr>
                     <tr>
                         <td scope="row" style="border: none; text-align: center;"><i class="far fa-envelope"></i></i></td>
-                        <td style="border: none;">{{$gegeven->email}}</td>
+                        <td style="border: none;"><a href="mailto:{{$gegevens->email}}">{{$gegevens->email}}</a></td>
                     </tr>
                     <tr>
                         <td scope="row" style="border: none; text-align: center;"><i class="fas fa-map-pin"></i></td>
-                        <td style="border: none;">{{$gegeven->street}}<br /> {{$gegeven->adress}} <br /> {{$gegeven->city}}</td>
+                        <td style="border: none;">{{$gegevens->street}}<br /> {{$gegevens->adress}} <br /> {{$gegevens->city}}</td>
                     </tr>
                 </tbody>
             </table>
-            @endforeach
         </div>
         </div>
     </div>

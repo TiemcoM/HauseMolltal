@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\ContactController;
-
+use App\Http\Controllers\Api\contactDetailsController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,5 +33,9 @@ Route::group([
     Route::prefix('contact')->group(function () {
         Route::get('get', [ContactController::class, 'get']);
         Route::delete('delete', [ContactController::class, 'delete']);
+    });
+    Route::prefix('contactDetails')->group(function () {
+        Route::get('get', [contactDetailsController::class, 'get']);
+        Route::put('update', [contactDetailsController::class, 'update']);
     });
 });
