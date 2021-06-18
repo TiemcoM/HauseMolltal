@@ -33,9 +33,7 @@ Route::get('/gallerij', function () {
     return view('pages/gallery/index');
 })->name('gallery');
 
-Route::get('/contact', function () {
-    return view('pages/contact');
-})->name('contact');
+Route::get('/contactform', [ContactUsFormController::class, 'createForm'])->name('contact');
 Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
 
 

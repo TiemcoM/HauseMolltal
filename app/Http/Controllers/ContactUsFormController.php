@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Models\contactDetails;
 use Mail;
 
 class ContactUsFormController extends Controller {
 
     // Create Contact Form
     public function createForm(Request $request) {
-      return view('contact');
+        $gegevens = contactDetails::all();
+        return view('pages.contact', compact('gegevens'));
     }
 
     // Store Contact Form data

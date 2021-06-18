@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm py-3">
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm py-2">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             Hause Molltal
