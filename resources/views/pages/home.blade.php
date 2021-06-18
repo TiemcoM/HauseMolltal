@@ -17,7 +17,7 @@
                     <img src="{{ asset('assets/img/HuisOmgeving/huis/huis2.JPG') }}" class="d-block w-100"
                          alt="HauseMoltall">
                     <div class="carousel-caption d-none d-md-block" style="background-color:rgba(0,0,0,0.4);">
-                        <h5>Hause Moltall</h5>1
+                        <h5>Hause Moltall</h5>
                         <p>Kom tot rust in de Oostenrijkse natuur!</p>
                     </div>
                 </div>
