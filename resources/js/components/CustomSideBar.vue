@@ -10,6 +10,9 @@
             <vs-col>
                 <SideBarItem name="contact" icon="fa-address-book" route="contact"></SideBarItem>
             </vs-col>
+            <vs-col>
+                <SideBarItem name="instellingen" icon="fa-cog" route="settings"></SideBarItem>
+            </vs-col>
         </vs-row>
     </div>
 </template>

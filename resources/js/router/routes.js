@@ -5,6 +5,7 @@ import Home from '../views/home/index';
 import Contact from '../views/contact/index';
 import Login from "../views/auth/login";
 import Calendar from '../views/calendar/index';
+import Settings from '../views/settings/index';
 
 export default [
     {
@@ -22,6 +23,11 @@ export default [
                 path: "/contact",
                 name: "Contact",
                 component: Contact,
+            },
+            {
+                path: "/settings",
+                name: "settings",
+                component: Settings,
             },
         ]
     },
