@@ -1,7 +1,6 @@
 import router from "../../router";
 
 const state = {
-    apiToken: localStorage.getItem('apiToken'),
     contact: [],
 }
 const getters = {}
@@ -12,8 +11,13 @@ const mutations = {
 }
 const actions = {
     getContact(context) {
-        const access_token = localStorage.getItem('apiToken');
-        axios.get(process.env.MIX_API_URL + 'contact/get', {headers: {'Authorization': `Bearer ${access_token}`}}).then(res => {
+        axios.get(process.env.MIX_API_URL + 'contact/get', {headers: {'Authorization': `Bearer ${localStorage.getItem('apiToken')}`}}).then(res => {
+            context.commit('setContact', res.data)
+        }).catch(err => {
+        })
+    },
+    deleteContact(context, id) {
+        axios.delete(process.env.MIX_API_URL + 'contact/delete', {headers: {'Authorization': `Bearer ${localStorage.getItem('apiToken')}`}, data: {id}}).then(res => {
             context.commit('setContact', res.data)
         }).catch(err => {
         })

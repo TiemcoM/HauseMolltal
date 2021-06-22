@@ -46,6 +46,9 @@ export default {
         },
         deleteContact(id) {
             console.log(id)
+            this.$store.dispatch("contact/deleteContact", id).then(res => {
+                this.getContact()
+            })
         }
     }
 
