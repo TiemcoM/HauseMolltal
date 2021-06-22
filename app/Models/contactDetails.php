@@ -10,7 +10,7 @@ class contactDetails extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id','phone_number', 'email', 'street', 'adress','city'
+        'id','phone_number', 'email', 'street', 'postcode','city'
     ];
 
 }

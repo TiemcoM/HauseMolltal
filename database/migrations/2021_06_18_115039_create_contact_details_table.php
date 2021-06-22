@@ -18,7 +18,7 @@ class CreateContactDetailsTable extends Migration
             $table->string('phone_number');
             $table->string('email');
             $table->string('street');
-            $table->string('adress');
+            $table->string('postcode');
             $table->string('city');
             $table->timestamps();
         });

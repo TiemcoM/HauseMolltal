@@ -116,12 +116,12 @@
                         <td style="border: none;">{{$gegevens->phone_number}}</td>
                     </tr>
                     <tr>
-                        <td scope="row" style="border: none; text-align: center;"><i class="far fa-envelope"></i></i></td>
+                        <td scope="row" style="border: none; text-align: center;"><i class="far fa-envelope"></i></td>
                         <td style="border: none;"><a href="mailto:{{$gegevens->email}}">{{$gegevens->email}}</a></td>
                     </tr>
                     <tr>
                         <td scope="row" style="border: none; text-align: center;"><i class="fas fa-map-pin"></i></td>
-                        <td style="border: none;">{{$gegevens->street}}<br /> {{$gegevens->adress}} <br /> {{$gegevens->city}}</td>
+                        <td style="border: none;">{{$gegevens->street}}<br /> {{$gegevens->postcode}}, {{$gegevens->city}}</td>
                     </tr>
                 </tbody>
             </table>

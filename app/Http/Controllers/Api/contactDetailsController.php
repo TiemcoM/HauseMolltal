@@ -17,7 +17,7 @@ class contactDetailsController extends Controller
             'phone_number' => 'sometimes|string',
             'email' => 'sometimes|string',
             'street' => 'sometimes|string',
-            'adress' => 'sometimes|string',
+            'postcode' => 'sometimes|string',
             'city' => 'sometimes|string',
         ]);
 
