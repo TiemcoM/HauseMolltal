@@ -16,12 +16,10 @@ export default {
     },
     methods: {
         getContactDetails() {
-            this.$store.dispatch("contactDetails/get").then(res => {
+            this.$store.dispatch("settings/getContacDetailst").then(res => {
+                console.log(res.data)
             });
         },
-        deleteContactDetails(id) {
-            console.log(id)
-        }
     }
 
 }
